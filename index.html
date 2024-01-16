@@ -4,8 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HYUNDAI CORPORATION</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
+      integrity="sha512-q54FvbV+gGBn+NvgaD4gpJ7w4wrO00DgW7Rx503PIhrf0CuMwLOwbS+bXgOBFSob+6GVy1HDPfaRLJ8w2jiS4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- fullpage 2.9.7 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"
+      integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
+    <!-- indicator -->
+    <ul id="indicator">
+      <li data-menuanchor="visual" class="active">
+        <a href="#visual"></a>
+      </li>
+      <li data-menuanchor="about">
+        <a href="#about"></a>
+      </li>
+      <li data-menuanchor="business">
+        <a href="#business"> </a>
+      </li>
+      <li data-menuanchor="h-story">
+        <a href="#h-story"></a>
+      </li>
+    </ul>
+
     <header id="header">
       <div class="inner">
         <nav>
@@ -81,16 +123,16 @@
               <a href="#">글로벌네트워크</a>
               <ul class="submenu"></ul>
             </li>
+          </ul>
 
-            <!-- 메뉴 확장 시 나오는 서비스 요소들 -->
-            <ul class="plus-element">
-              <li>
-                <a href="#">E-CATALOG</a>
-              </li>
-              <li>
-                <a href="#">CONTACT US</a>
-              </li>
-            </ul>
+          <!-- 메뉴 확장 시 나오는 서비스 요소들 -->
+          <ul class="plus-element">
+            <li>
+              <a href="#">E-CATALOG</a>
+            </li>
+            <li>
+              <a href="#">CONTACT US</a>
+            </li>
           </ul>
 
           <div class="right-menu">
@@ -100,9 +142,12 @@
             </ul>
             <button type="button" class="search">
               <i class="hidden">검색</i>
-              <img src="" alt="w-검색아이콘" />
+              <!--  <img src="" alt="w-검색아이콘" />
               <img src="" alt="b-검색아이콘" />
-              <img src="" alt="닫기 버튼" />
+              <img src="" alt="닫기 버튼" /> -->
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
 
@@ -121,81 +166,359 @@
     </header>
     <!-- e: -->
 
-    <main id="container">
-      <section class="visual">
-        <figure><img src="" alt="visual-img" /></figure>
-        <div class="visual-title">
-          <h2>Creative Foresight</h2>
-          <p>현대코퍼레이션은 고객과 사회가 원하는 것에 부응하기 위하여 항상 새롭고 신선함을 추구합니다.</p>
+    <main id="fullPage">
+      <section class="section visual">
+        <div class="visual-slide swiper-wrapper">
+          <div class="slide-item item1 swiper-slide">
+            <video src="./video/video1.mp4"></video>
+            <div class="visual-title">
+              <h2>Creative Foresight</h2>
+              <p>현대코퍼레이션은 고객과 사회가 원하는 것에 부응하기 위하여 항상 새롭고 신선함을 추구합니다.</p>
+            </div>
+          </div>
+          <div class="slide-item item2 swiper-slide">
+            <video src="./video/video2.mp4"></video>
+            <div class="visual-title">
+              <h2>Positive Thinking</h2>
+              <p>현대인으로서의 투철한 주인의식과 매사에 능동적으로 대응하고자 하는 자세를 추구합니다.</p>
+            </div>
+          </div>
+          <div class="slide-item item3 swiper-slide">
+            <video src="./video/video3.mp4"></video>
+            <div class="visual-title">
+              <h2>Unwavering Drive</h2>
+              <p>
+                현대는 다른 사람들이 불가능하다며 포기해 버린 일을 험난한 여건 속에서도 강인한 추진력으로 성공시켜
+                왔습니다.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="swiper">
-          <!-- 수정하기 -->
-        </div>
+
         <div class="main-scroll-wrap">
           <button class="main-scroll" type="button"></button>
         </div>
       </section>
       <!-- e: visual -->
 
-      <section class="about">
+      <section class="section about">
         <ul class="about-wrap">
           <li class="about-con about-us">
-            <a href="#">
-              <img src="" alt="about-ico" />
-              <div class="about-title">
-                <h3>ABOUT US</h3>
-                <strong>준비된 100년 기업</strong>
-                <p>
-                  우리는 끊임없는 환경변화에 유연하게 적응하고, 시장에서 영원히 지속 가능한 기업으로 진화하여,
-                  세상을이롭게 하는 더 큰 가치를 창출합니다.
-                </p>
-                <button class="more" type="button">자세히 보기</button>
-              </div>
-            </a>
+            <div class="about-title">
+              <img src="./img/about-pic01.svg" alt="about-ico" />
+              <h3>ABOUT US</h3>
+            </div>
+            <div class="about-text">
+              <strong>준비된 100년 기업</strong>
+              <p>
+                우리는 끊임없는 환경변화에 유연하게 적응하고, 시장에서 영원히 지속 가능한 기업으로 진화하여,
+                세상을이롭게 하는 더 큰 가치를 창출합니다.
+              </p>
+            </div>
+            <a href="#" class="more">자세히 보기</a>
           </li>
-
-          <!-- 내용넣기 -->
           <li class="about-con investment">
-            <a href="#">
-              <img src="" alt="investment-ico" />
-              <div class="about-title">
-                <h3>INVESTMENT</h3>
-                <strong></strong>
-                <p></p>
-                <button class="more" type="button">자세히 보기</button>
-              </div>
-            </a>
+            <div class="about-title">
+              <img src="./img/about-pic02.svg" alt="investment-ico" />
+              <h3>INVESTMENT</h3>
+            </div>
+            <div class="about-text">
+              <strong>글로벌 No.1 종합무역상사</strong>
+              <p>
+                한국의 대표적 종합무역상사로 수출과 수입, 삼국거래, 자원개발, 해외투자 등 다양한 사업영역에서 활동하고
+                있습니다.
+              </p>
+            </div>
+            <a href="#" class="more">자세히 보기</a>
           </li>
           <li class="about-con social">
-            <a href="#">
-              <img src="" alt="social-ico" />
-              <div class="about-title">
-                <h3>SOCIAL</h3>
-                <strong></strong>
-                <p></p>
-                <button class="more" type="button">자세히 보기</button>
-              </div>
-            </a>
+            <div class="about-title">
+              <img src="./img/about-pic03.svg" alt="social-ico" />
+              <h3>SOCIAL</h3>
+            </div>
+            <div class="about-text">
+              <strong>함께하는 우리</strong>
+              <p>
+                너와 나의 경계를 넘어 ‘함께하는 우리’, 풍요롭고 행복한 ‘지속가능 사회’의 꿈을 위해 이웃사랑과 나눔의
+                기업정신을 실천합니다.
+              </p>
+            </div>
+            <a href="#" class="more">자세히 보기</a>
           </li>
         </ul>
       </section>
       <!-- e:about -->
 
-      <section class="business">
+      <section class="section business">
         <h4 class="sec-title">BUSINESS</h4>
-        <div class="business-title">
-          <h3></h3>
-          <p></p>
+        <div class="business-con">
+          <div class="business-title">
+            <h3>철강 <b>steel</b></h3>
+            <p>
+              세계 정상의 철강전문 기업들과 함께 풍부한 비즈니스 경험과 노하우를 갖고 세계 최강의 글로벌 철강 트레이더로
+              활약하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>석유화학<b>Petroleum & Chemical</b></h3>
+            <p>
+              빠른 정보력과 숙련된 거래기법으로 급변하는 시장변화에 대응하면서 고객을 만족시키는 세계 최고의 석유화학
+              트레이더로 발전하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>자동차<b>Automobile</b></h3>
+            <p>
+              세계 자동차시장에서 브랜드 가치가 높은 현대․기아자동차와 함께 다양한 방식의 영업활동으로 신규시장 개척 및
+              확대에 주력하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>상용차량<b>railway System</b></h3>
+            <p>
+              상용차량의 설계, 제작 및 서비스 분야에서 세계적 경쟁력을 갖추고 있는 현대로템과 협력하여 다양한 종류의
+              철도차량을 공급하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>선박<b>Ship</b></h3>
+            <p>조선부문 글로벌 No.1 기업으로 명성 높은 현대중공업의 선박 및 선박용 기자재를 전 세계에 공급합니다.</p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>플랜트<b>plant</b></h3>
+            <p>
+              빠른 정보력과 탁월한 마케팅 능력, 앞선 프로젝트 파이낸싱 기법으로 대규모 산업설비의 제작 및 인프라 공급
+              서비스를 수행합니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>전기전자<b>electronic equipment</b></h3>
+            <p>
+              발전기, 변압기, 배전반 등 각종 전력기자재의 공급에서 엔지니어링, 설치, 프로젝트 파이낸싱까지 다양한
+              서비스를 제공하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>신재생에너지<b>renwable energy</b></h3>
+            <p>
+              인류사회 친환경 청정에너지 확산을 위한 신재생에너지 Total Solution 제공 전문으로, 인프라 시설 구축, 기획,
+              투자, 파이낸싱, 건설 운영 전문 사업을 지속적으로 개발하고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>건설장비<b>construction equipment</b></h3>
+            <p>
+              굴삭기, 휠로더, 지게차 등 건설장비와 산업차량을 주력으로 고객의 니즈에 맞는 다양하고 신뢰성 높은
+              건설기계장비 공급에 힘쓰고 있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>자원개발<b>natural resources</b></h3>
+            <p>
+              석탄, 석유, 가스 등 30년 이상 쌓은 풍부한 사업경험을 바탕으로 유망한 에너지․광물자원의 탐사 및 개발을 적극
+              추진해 나갈 것입니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+          <div class="business-title">
+            <h3>해외투자<b>foreign investment</b></h3>
+            <p>
+              철강가공, 공업용지 개발 등 세계를 무대로 다양한 비즈니스 모델을 개발하며 성공적인 해외투자 사업을 전개하고
+              있습니다.
+            </p>
+            <a href="#" class="more">자세히 보기</a>
+          </div>
+        </div>
+        <div class="swiper business-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/business-ico-steel.png" alt="철강" />
+              <div class="business-text">
+                <strong>철강</strong>
+                <p>steel</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-chemical.png" alt="석유화학" />
+              <div class="business-text">
+                <strong>석유화학</strong>
+                <p>Petroleum & Chemical</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-automobile.png" alt="자동차" />
+              <div class="business-text">
+                <strong>자동차</strong>
+                <p>Automobile</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-rail.png" alt="상용차량" />
+              <div class="business-text">
+                <strong>상용차량</strong>
+                <p>railway System</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-ship.png" alt="선박" />
+              <div class="business-text">
+                <strong>선박</strong>
+                <p>Ship</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-plant.png" alt="플랜트" />
+              <div class="business-text">
+                <strong>플랜트</strong>
+                <p>plant</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-electronic.png" alt="전기전자" />
+              <div class="business-text">
+                <strong>전기전자</strong>
+                <p>electronic equipment</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-renwable.png" alt="신재생에너지" />
+              <div class="business-text">
+                <strong>신재생에너지</strong>
+                <p>renwable energy</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-construction.png" alt="건설장비" />
+              <div class="business-text">
+                <strong>건설장비</strong>
+                <p>construction equipment</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-natural.png" alt="자원개발" />
+              <div class="business-text">
+                <strong>자원개발</strong>
+                <p>natural resources</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/business-ico-foreign.png" alt="해외투자" />
+              <div class="business-text">
+                <strong>해외투자</strong>
+                <p>foreign investment</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- button -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
-      <section class="h-story">
+      <section class="section h-story">
         <h4 class="sec-title">H-STORY</h4>
+        <p>
+          넓은 세상, 수많은 경계를 넘어 새로운 기회를 찾아가는 길, 현대코퍼레이션의 끊임없는 변화와 혁신의 여정에
+          초대합니다.
+        </p>
+        <div class="swiper h-story-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide story-text">
+              <h3>현대코퍼레이션, 호실적에 신용등급 잇따라 개선… 내년 전망도 ‘맑음’</h3>
+              <p>
+                현대코퍼레이션이 신용평가사들로부터 연이어 개선된 평가를 받고 있다. 시장에서는 안정적인 영업 수익성,
+                양호한 재무 안전성 등을 감안해 내년 신용등급도 안정적일 것이란 전망을 내놓고 있다.
+              </p>
+              <em>2023.12.23</em>
+            </div>
+            <div class="swiper-slide story-text">
+              <h3>[新대한민국 우리가 이끈다]”젊고 유연한 사고 바탕, 조직 이끌 것”</h3>
+              <p>
+                34세란 나이로 해외에서 법인을 이끌고 있는 MZ(밀레니얼세대+Z세대) 법인장이 있다. 종합상사
+                현대코퍼레이션의 사공혁 프로다. 그는 국내 본사에서 생각해 낸 아이디어를 호주 현지에서 완성시키며 리더의
+                자리에 올랐다.
+              </p>
+              <em>2023.11.14</em>
+            </div>
+            <div class="swiper-slide story-text">
+              <h3>“K-버섯에 빠진 영국인”…현대코퍼레이션 영국 생산단지 증설</h3>
+              <p>
+                현대코퍼레이션(옛 현대종합상사)이 영국 최대규모의 동양버섯 농장을 조성했다. 현지 소비자의 건강식·채식
+                선호로 수요가 늘자 영국 진출 5년 만에 생산단지를 추가로 지었다.
+              </p>
+              <em>2023.11.05</em>
+            </div>
+            <div class="swiper-slide story-text">
+              <h3>밥상에 빠질 수 없는 그맛…영국·호주 사람들도 찾는 K-버섯</h3>
+              <p>
+                표고버섯 K-버섯의 글로벌 시장 진출이 가속화되고 있다. 추석과 같은 명절마다 전, 갈비찜, 잡채, 나물에
+                널리쓰이는 표고버섯 등이 영국·호주에서 인기다.
+              </p>
+              <em>2023.09.30</em>
+            </div>
+          </div>
+
+          <!-- button -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <!-- e: h-story -->
+
+      <figure class="hyundai-br fp-auto-height"><img src="./img/hyundai-br.jpg" alt="" /></figure>
+
+      <section class="contact">
+        <div class="contact-title">
+          <h2>contact us</h2>
+          <p>사업제안, 협력사항, 아이디어 등 문의해주시면 신속하게 답변하여 드리겠습니다.</p>
+        </div>
+        <div class="contact-con">
+          <p>서울특별시 종로구 율곡로 2길 25 (우편번호 03143) <b>02-390-1114</b></p>
+          <a href="#" class="contact-more">more</a>
+        </div>
       </section>
     </main>
     <!-- e: -->
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <h2 class="logo">hyundai corporation</h2>
+      <div class="footer-con">
+        <ul class="footer-text">
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">개인정보 취급방침</a></li>
+          <li><a href="#">고객문의</a></li>
+        </ul>
+        <strong>서울특별시 종로구 율곡로 2길 25 (우편번호 03143) | 02-390-1114</strong>
+        <p>COPYRIGHT 2023 HYUNDAI CORPORATION. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="family-site">
+        <div class="family-site-wrap">
+          <strong>Family Site</strong>
+          <ul class="select-list">
+            <li>HYUNDAI CORPORATION HOLDINGS</li>
+            <li>HYUNDAI C SQUARE</li>
+            <li>HYUNDAI NAVIS</li>
+            <li>HYUNDAI CORPORATION JAPAN</li>
+            <li>HYUNDAI BATTERIES</li>
+            <li>HYUNDAI POWER WORLD</li>
+            <li>HYUNDAI CORPORATION WEB CATALOGUE</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- e: -->
   </body>
 </html>
