@@ -46,3 +46,15 @@ label,
 a {
   cursor: pointer;
 }
+
+.inner {
+  width: 154rem;
+  margin: 0 auto;
+  background: rgba(255, 242, 97, 0.3);
+}
+.logo a {
+  display: block;
+  width: 13rem;
+  height: 4.2rem;
+  background: url(../img/logo.png) no-repeat 0 0;
+}
