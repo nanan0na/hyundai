@@ -20,6 +20,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: 0.3s;
 }
 a:hover {
   text-decoration: none;
@@ -57,4 +58,95 @@ a {
   width: 13rem;
   height: 4.2rem;
   background: url(../img/logo.png) no-repeat 0 0;
+  /* 임시 */
+  /* filter: invert(1); */
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 43, 43, 0.2);
+  z-index: 100;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+  position: relative;
+  color: #fff;
+}
+#header::before {
+  content: '';
+  position: absolute;
+  top: -52rem;
+  left: 0;
+  width: 100%;
+  height: 52rem;
+  background: #fff;
+  transition: 0.3s;
+}
+#header.active::before {
+  top: 0;
+}
+#header.hide {
+  top: 12rem;
+}
+.gnb {
+  display: flex;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.gnb li {
+  position: relative;
+}
+.gnb li.on {
+  background: #fff;
+}
+.gnb li a {
+  display: block;
+  padding: 10px 20px;
+}
+.gnb li::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: var(--main-color);
+  transition: 0.3s;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gnb li:hover::after,
+.gnb li.active::after {
+  width: 80%;
+}
+.gnb li.active {
+  color: var(--main-color);
+}
+
+/* .submenu, */
+.plus-element,
+.lang-toggle .eng,
+.tab-search,
+.util {
+  display: none;
+}
+.right-menu {
+  display: flex;
+  gap: 2.8rem;
+}
+.search-ico {
+  display: block;
+  width: 3rem;
+  height: 3.2rem;
+  background: #ff5;
+}
+.submenu {
+  position: absolute;
+  top: 60px;
+  font-weight: 400;
 }
