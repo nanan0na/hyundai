@@ -1,7 +1,5 @@
 @charset 'utf-8';
-/* .section {
-  height: 100vh;
-} */
+
 /* visual */
 .visual {
   background: #f39;
@@ -185,4 +183,72 @@
   border-top: 2px solid #fff;
   border-radius: 2px;
   transform: rotate(135deg);
+}
+
+/* business */
+.sec-title {
+  font-weight: 700;
+  color: var(--main-color-light);
+}
+.swiper-slide {
+  cursor: pointer;
+}
+
+.business {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 16rem 0;
+}
+.business-con {
+  margin-top: 5rem;
+}
+.business-title + .business-title {
+  display: none;
+}
+.business-title h3 {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 4.8rem;
+  color: #fff;
+}
+.business-title h3 b {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.business-title p {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  width: 45%;
+  word-break: keep-all;
+}
+.business-title > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem 2rem 0;
+  margin-top: 3.2rem;
+  color: #fff;
+}
+.business-title > a::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-radius: 2px;
+  transform: rotate(135deg);
+}
+.business-slide > .swiper-wrapper {
+  display: flex;
+  flex: 0 0 auto;
+}
+.business-slide > .swiper-wrapper > .swiper-slide {
+  width: 24rem;
+  height: 29.8rem;
 }

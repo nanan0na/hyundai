@@ -6,7 +6,7 @@ $(function () {
 
     // 3.필요 옵션 적용
     // 스크롤 속도 : 기본값 700
-    scrollingSpeed: 1400,
+    scrollingSpeed: 1000,
 
     // 고정 시킬 요소
     fixedElements: '#header',
