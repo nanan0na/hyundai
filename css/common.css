@@ -179,31 +179,35 @@ nav {
   height: 4.2rem;
   background: url(../img/logo.png) no-repeat 0 0;
 }
-
-.footer-text {
+.footer-link {
   display: flex;
-  gap: 2rem;
   color: #fff;
-  font-weight: 700;
-  font-size: 1.6rem;
 }
-.footer-text > li {
+.footer-link li a {
+  display: block;
   position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 5px 10px;
 }
-.footer-text li:first-child::after {
-  width: 0;
-}
-.footer-text > li::after {
+.footer-link li a::after {
   content: '';
   display: block;
   position: absolute;
   top: 50%;
-  left: -20%;
+  left: 0;
   transform: translateY(-50%);
-  width: 2px;
-  height: 50%;
+  width: 1.5px;
+  height: 40%;
   background: #fff;
 }
+.footer-link li:first-child a::after {
+  display: none;
+}
+.footer-link li:first-child {
+  margin-left: -10px;
+}
+
 .footer-con strong {
   color: #ddd;
   font-size: 1.8rem;
