@@ -202,7 +202,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 2rem 0 0;
+  padding: 6rem 0 0;
 }
 
 /* 임시 */
@@ -288,10 +288,13 @@
   align-items: center;
   text-align: center;
   padding: 5rem 0;
+  transition: 0.3s;
 }
+.business-slide > .swiper-wrapper > .swiper-slide:hover,
 .business-slide > .swiper-wrapper > .swiper-slide.active {
   background: var(--main-color);
 }
+
 .business-slide .business-ico {
   width: 100%;
 }
@@ -309,8 +312,8 @@
 
 /* h-story */
 .h-story {
-  padding: 12rem 0 9rem;
   letter-spacing: -0.4px;
+  padding: 12rem 0 9rem;
 }
 .h-story > .inner > p {
   margin-top: 1.2rem;
@@ -329,24 +332,25 @@
   gap: 2rem;
   align-items: center;
 }
-.h-story-slide .swiper-wrapper .story-text {
+.story-text {
   width: 50rem;
   height: 30rem;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 3.2rem 2.8rem;
+  transition: 0.3s;
 }
 
 .story-text h3 {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #000;
 }
 .story-text p {
   margin-top: 2.2rem;
   font-size: 1.8rem;
   font-weight: 400;
   color: #333;
+  transition: 0.3s;
 
   /* 줄바꿈 */
   width: 40rem;
@@ -361,11 +365,12 @@
   margin-top: 3rem;
   font-weight: 300;
 }
-.story-text.active,
-.story-text.active h3 {
+.story-text:hover,
+.story-text.active {
   background: var(--main-color);
   color: #fff;
 }
+.story-text:hover p,
 .story-text.active p {
   color: #d8d8d8;
 }

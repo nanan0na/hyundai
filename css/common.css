@@ -57,7 +57,7 @@ a {
 .inner {
   width: 154rem;
   margin: 0 auto;
-  background: rgba(110, 97, 255, 0.3);
+  /* background: rgba(110, 97, 255, 0.3); */
 }
 .logo a {
   display: block;
@@ -72,7 +72,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 43, 43, 0.2);
+  /* background: rgba(255, 43, 43, 0.2); */
   z-index: 100;
 }
 nav {

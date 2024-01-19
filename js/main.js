@@ -11,10 +11,8 @@ $(function () {
     // 고정 시킬 요소
     fixedElements: '#header',
 
-    // 영역 콘텐츠의 세로 정렬
     verticalCentered: true,
 
-    // 큰 영역으로 이동할 때 상단에 철컥 붙게
     bigSectionsDestination: 'top',
 
     autoScrolling: true,
