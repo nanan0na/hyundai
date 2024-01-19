@@ -24,7 +24,7 @@
 }
 .visual-title {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -41,7 +41,7 @@
 }
 .main-scroll-wrap {
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -202,7 +202,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 12rem 0;
+  padding: 2rem 0 0;
 }
 
 /* 임시 */
@@ -309,7 +309,7 @@
 
 /* h-story */
 .h-story {
-  padding: 15rem 0 2rem;
+  padding: 12rem 0 9rem;
   letter-spacing: -0.4px;
 }
 .h-story > .inner > p {
@@ -372,12 +372,17 @@
 
 /* br */
 .hyundai-br {
-  margin-top: 20rem;
+  margin-top: 15rem;
+}
+.hyundai-br img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* contact */
 .contact {
-  margin-top: 10rem;
+  margin-top: 12rem;
 }
 .contact-con {
   display: flex;

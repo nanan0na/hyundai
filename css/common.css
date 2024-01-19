@@ -9,6 +9,12 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 body {
   font: 2rem/1.5 'Pretendard', sans-serif;
