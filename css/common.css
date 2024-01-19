@@ -15,7 +15,7 @@ body {
   color: var(--text-color);
   /*  word-break: keep-all; */
   text-transform: capitalize;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 a {
   text-decoration: none;
