@@ -1,21 +1,14 @@
 $(function () {
-  $('.fullpage').fullpage({
-    // 1. 앵커 설정
+  $('#fullpage').fullpage({
     anchors: ['visual', 'about', 'business', 'h-story'],
+
+    // 임시
     navigation: true,
-
-    // 3.필요 옵션 적용
-    // 스크롤 속도 : 기본값 700
-    scrollingSpeed: 700,
-
-    // 고정 시킬 요소
+    scrollingSpeed: 400,
     fixedElements: '#header',
-
-    verticalCentered: true,
-
     bigSectionsDestination: 'top',
 
-    autoScrolling: true,
+    verticalCentered: true,
 
     scrollBar: true,
   });
