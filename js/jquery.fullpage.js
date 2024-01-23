@@ -2595,6 +2595,7 @@
      */
     function removeMouseWheelHandler() {
       if (document.addEventListener) {
+        // 수정 false -> { passive: false }
         document.removeEventListener('mousewheel', MouseWheelHandler, { passive: false }); //IE9, Chrome, Safari, Oper
         document.removeEventListener('wheel', MouseWheelHandler, { passive: false }); //Firefox
         document.removeEventListener('MozMousePixelScroll', MouseWheelHandler, { passive: false }); //old Firefox
@@ -2628,11 +2629,13 @@
           : 'DOMMouseScroll'; // let's assume that remaining browsers are older Firefox
 
       if (support == 'DOMMouseScroll') {
+        // 수정 false -> { passive: false }
         document[_addEventListener](prefix + 'MozMousePixelScroll', MouseWheelHandler, { passive: false });
       }
 
       //handle MozMousePixelScroll in older Firefox
       else {
+        // 수정 false -> { passive: false }
         document[_addEventListener](prefix + support, MouseWheelHandler, { passive: false });
       }
     }

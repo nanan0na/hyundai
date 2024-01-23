@@ -1,15 +1,23 @@
 $(function () {
+  // fullpage
+  const $header = $('#header');
+
   $('#fullpage').fullpage({
     anchors: ['visual', 'about', 'business', 'h-story'],
 
-    // 임시
-    navigation: true,
-    scrollingSpeed: 400,
     fixedElements: '#header',
+
     bigSectionsDestination: 'top',
-
-    verticalCentered: true,
-
     scrollBar: true,
+
+    afterLoad: function (anchorLink, index) {
+      // 왜?????? 안 움직이니???????
+      console.log('afterLoad - anchorLink:', anchorLink, 'index:', index);
+      if (anchorLink === 'h-story') {
+        $.fn.fullpage.setAutoScrolling(false);
+      } else {
+        $.fn.fullpage.setAutoScrolling(true);
+      }
+    },
   });
 });
