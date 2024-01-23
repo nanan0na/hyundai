@@ -238,6 +238,8 @@ nav {
   border: 2px solid #fff;
   border-radius: 3px;
   height: 5rem;
+  position: relative;
+  cursor: pointer;
 }
 .family-site::after {
   content: '';
@@ -246,7 +248,38 @@ nav {
   height: 2rem;
   background: url(../img/up-arrow.svg) no-repeat 0 0;
   margin-top: 3px;
+  transition: 0.3s;
+}
+.family-site.active::after {
+  transform: rotate(180deg); /* active 상태에서는 화살표를 회전하여 위로 표시 */
 }
 .select-list {
-  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 3px;
+  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.15));
+  backdrop-filter: blur(1px);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+
+  width: 100%;
+  overflow: hidden;
+  transition: 0.3s ease; /* max-height에 대한 트랜지션 속성 추가 */
+  max-height: 5rem; /* 초기에는 숨겨진 상태로 유지 */
+  opacity: 0;
+}
+
+.select-list.active {
+  max-height: 50rem;
+  opacity: 1;
+}
+
+.select-list li + li {
+  margin-top: 2rem;
 }
