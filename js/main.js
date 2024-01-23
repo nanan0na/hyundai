@@ -4,20 +4,11 @@ $(function () {
 
   $('#fullpage').fullpage({
     anchors: ['visual', 'about', 'business', 'h-story'],
-
     fixedElements: '#header',
-
+    verticalCentered: true,
     bigSectionsDestination: 'top',
-    scrollBar: true,
+    scrollBar: true, // 스크롤바 사용 여부 설정
 
-    afterLoad: function (anchorLink, index) {
-      // 왜?????? 안 움직이니???????
-      console.log('afterLoad - anchorLink:', anchorLink, 'index:', index);
-      if (anchorLink === 'h-story') {
-        $.fn.fullpage.setAutoScrolling(false);
-      } else {
-        $.fn.fullpage.setAutoScrolling(true);
-      }
-    },
+    menu: '#indicator',
   });
 });
