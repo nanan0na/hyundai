@@ -123,8 +123,8 @@ nav {
 }
 .gnb > li > a {
   display: block;
-  /* padding: 10px 20px; */
-  padding: 10px 35px;
+  padding: 10px 20px;
+  /* padding: 10px 35px; */
 }
 .gnb > li::after {
   content: '';
@@ -134,13 +134,14 @@ nav {
   background: var(--main-color);
   transition: 0.3s;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .gnb > li:hover::after,
 .gnb > li.active::after {
-  width: 80%;
+  width: 100%;
 }
 .gnb > li.active {
   color: var(--main-color);
@@ -248,7 +249,7 @@ nav {
   height: 2rem;
   background: url(../img/up-arrow.svg) no-repeat 0 0;
   margin-top: 3px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .family-site.active::after {
   transform: rotate(180deg); /* active 상태에서는 화살표를 회전하여 위로 표시 */
@@ -270,7 +271,7 @@ nav {
 
   width: 100%;
   overflow: hidden;
-  transition: 0.3s ease; /* max-height에 대한 트랜지션 속성 추가 */
+  transition: 0.4s ease; /* max-height에 대한 트랜지션 속성 추가 */
   max-height: 5rem; /* 초기에는 숨겨진 상태로 유지 */
   opacity: 0;
 }

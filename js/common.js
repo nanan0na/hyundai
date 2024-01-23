@@ -1,8 +1,11 @@
 $(function () {
+  // header
+
   // footer
   const $selectList = $('.select-list');
-  $('.family-site').on('click', () => {
+  const $familySite = $('.family-site');
+  $familySite.on('click', () => {
     $selectList.toggleClass('active');
-    $('.family-site').toggleClass('active');
+    $familySite.toggleClass('active');
   });
 });
