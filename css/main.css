@@ -311,8 +311,10 @@
 }
 .business-slide > .swiper-wrapper > .swiper-slide {
   flex: 0 0 auto;
-  width: 24rem;
+  /*   width: 24rem; */
+  /* width: 12.5%; */
   height: 30rem;
+  aspect-ratio: 1/1.25;
   border: 1px solid rgba(255, 255, 255, 0.3);
   /* border: 1px solid #f39; */
   color: #fff;
@@ -370,6 +372,7 @@
 }
 .story-text {
   width: 50rem;
+  width: 26.0417%;
   height: 30rem;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -389,7 +392,8 @@
   transition: 0.3s;
 
   /* 줄바꿈 */
-  width: 40rem;
+  /*  width: 40rem; */
+  width: 97%;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
