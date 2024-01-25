@@ -368,7 +368,8 @@
   left: 5%;
   background: url(../img/business-prev-btn.png);
 }
-.swiper-button-prev::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   content: '';
 }
 
@@ -378,7 +379,7 @@
   letter-spacing: -0.4px;
   padding: 12rem 0 9rem;
 }
-.h-story > .inner > p {
+.h-story .inner > p {
   margin-top: 1.2rem;
   font-size: 2.4rem;
   width: 40%;
@@ -386,7 +387,7 @@
 }
 .h-story-slide {
   position: relative;
-  overflow: hidden;
+  width: 100%;
   left: 10%;
   margin-top: 7rem;
 }
@@ -394,6 +395,27 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+.swiper-button-story {
+  position: absolute;
+  width: 5%;
+  top: 15%;
+  right: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h-story .swiper-button-prev,
+.h-story .swiper-button-next {
+  width: 3rem;
+  height: 3.5rem;
+  object-fit: cover;
+}
+.h-story .swiper-button-prev {
+  background: url(../img/h-story-btn-prev.png) no-repeat 0 0 / cover;
+}
+.h-story .swiper-button-next {
+  background: url(../img/h-story-btn-next.png) no-repeat 0 0 / cover;
 }
 .story-text {
   width: 50rem;
@@ -415,7 +437,6 @@
   font-weight: 400;
   color: #333;
   transition: 0.3s;
-
   /* 줄바꿈 */
   /*  width: 40rem; */
   width: 97%;
@@ -431,12 +452,12 @@
   font-weight: 300;
 }
 .story-text:hover,
-.story-text.active {
+.h-story .swiper-slide-active {
   background: var(--main-color);
   color: #fff;
 }
 .story-text:hover p,
-.story-text.active p {
+.h-story .swiper-slide-active p {
   color: #d8d8d8;
 }
 

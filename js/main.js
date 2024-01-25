@@ -124,9 +124,19 @@ $(function () {
       },
     },
   });
-  $('.swiper-slide').on('click', function () {
+
+  $('.business .swiper-slide').on('click', function () {
     $(this).addClass('active').siblings().removeClass('active');
     const clickedIndex = $(this).index();
     businessSlider.slideToLoop(clickedIndex);
+  });
+
+  const storySlider = new Swiper('.h-story-slide', {
+    slidesPerView: 4,
+    loop: true,
+    navigation: {
+      prevEl: '.story-prv',
+      nextEl: '.story-nxt',
+    },
   });
 });
