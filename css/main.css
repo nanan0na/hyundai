@@ -212,6 +212,8 @@
   gap: 1rem;
   margin-top: 4rem;
   color: #fff;
+  position: relative;
+  z-index: 50;
 }
 .about-text a::after {
   content: '';
@@ -304,8 +306,7 @@
 }
 .business-slide > .swiper-wrapper {
   display: flex;
-  /* 임시 */
-  gap: 2rem;
+
   align-items: center;
   overflow: hidden;
 }

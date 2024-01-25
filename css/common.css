@@ -59,14 +59,7 @@ a {
   margin: 0 auto;
   /* background: rgba(110, 97, 255, 0.3); */
 }
-.logo a {
-  display: block;
-  width: 13rem;
-  height: 4.2rem;
-  background: url(../img/logo.png) no-repeat 0 0;
-  /* 임시 */
-  /* filter: invert(1); */
-}
+
 #header {
   position: fixed;
   top: 0;
@@ -97,7 +90,15 @@ nav {
   top: 0;
 }
 #header.hide {
-  top: 12rem;
+  top: -12rem;
+}
+.logo a {
+  display: block;
+  width: 13rem;
+  height: 4.2rem;
+  background: url(../img/logo.png) no-repeat 0 0;
+  /* 임시 */
+  /* filter: invert(1); */
 }
 .gnb {
   display: flex;
@@ -107,63 +108,61 @@ nav {
 .gnb > li {
   position: relative;
 }
+.gnb > li > a {
+  display: block;
+}
 .submenu {
   position: absolute;
-  top: 70px;
-  font-weight: 400;
+  top: 60px;
   left: 0%;
   display: none;
+  color: #000;
+  width: 100%;
+  white-space: nowrap;
 }
-.submenu > li {
-  padding-top: 16px;
+.submenu > li > a {
+  font-weight: 500;
+  width: 100%;
+  display: block;
   text-align: center;
+  white-space: nowrap;
 }
-.gnb > li.on {
-  background: #fff;
-}
+
 .gnb > li > a {
   display: block;
   padding: 10px 20px;
-  /* padding: 10px 35px; */
-}
-.gnb > li::after {
-  content: '';
-  display: block;
-  width: 0%;
-  height: 3px;
-  background: var(--main-color);
-  transition: 0.3s;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.gnb > li:hover::after,
-.gnb > li.active::after {
-  width: 100%;
-}
 .gnb > li.active {
   color: var(--main-color);
 }
+.gnb > li.active a {
+  padding: 10px 35px;
+}
 
-/* .submenu, */
-.plus-element,
-.lang-toggle .eng,
-.tab-search,
 .util {
   display: none;
 }
+
 .lang-toggle {
   font-weight: 600;
+  position: relative; /* 부모 요소에 position: relative; 추가 */
 }
-.lang-toggle.active .eng {
-  display: block;
+
+.lang-toggle .eng {
+  opacity: 0;
   position: absolute;
-  bottom: 5%;
-  padding-top: 5px;
-  border-top: 2px solid var(--main-color);
+  bottom: -70%;
+  padding-top: 0;
+  border-top: 2px solid var(--main-color-light);
+  transition: opacity 0.3s ease, bottom 0.3s ease; /* transition 속성 추가 */
 }
+
+.lang-toggle:hover .eng {
+  opacity: 1;
+  bottom: -100%;
+}
+
 .right-menu {
   display: flex;
   gap: 2.8rem;
@@ -173,9 +172,83 @@ nav {
   width: 3rem;
   height: 3.2rem;
   background: url(../img/search-ico.svg) no-repeat 0 0;
-  /* filter: invert(1); */
+}
+.tab-search {
+  position: absolute;
+  bottom: -200%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.search-wrap {
+  width: 90rem;
+  height: 8rem;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.search-wrap input:focus {
+  outline: none;
+}
+.search-wrap input {
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  margin-left: 1.5rem;
+}
+.search-wrap button {
+  display: block;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  background: url(../img/search-ico.svg) no-repeat 0 0 / contain;
+  filter: brightness(0);
+  margin-left: 2rem;
+}
+.plus-element {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: -220%;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--main-color);
+  display: none;
+}
+.plus-element li {
+  width: 16rem;
+  height: 6rem;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+.plus-element li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.plus-element li + li {
+  border: none;
+  margin-top: 1rem;
+  color: #fff;
+  border-radius: 10px;
+  background: url(../img/contact-us-pic.jpg) 0 0 / cover;
 }
 
+.btn-close {
+  width: 3rem;
+  height: 3.2rem;
+  background: url(../img/close-btn.png) 0 0 / contain;
+  display: none;
+}
 #footer {
   background: #222;
   padding: 7rem 0 3.6rem;
