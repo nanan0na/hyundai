@@ -126,7 +126,7 @@
   transform: translateX(-50%);
   color: #fff;
   text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4);
 }
 .visual-title h2 {
   font-weight: 700;
@@ -327,7 +327,7 @@
   font-size: 4.8rem;
   color: #fff;
 }
-.business-title h3 b {
+.business-title em {
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 1rem;

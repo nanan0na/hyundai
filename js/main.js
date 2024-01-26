@@ -1,6 +1,4 @@
-$(function () {
-  const $header = $('#header');
-
+window.addEventListener('load', () => {
   $('#fullpage').fullpage({
     anchors: ['visual', 'about', 'business', 'h-story'],
     fixedElements: '#header',
@@ -8,10 +6,26 @@ $(function () {
     bigSectionsDestination: 'top',
     scrollBar: true,
     menu: '#indicator',
+    afterLoad: function (origin, destination, direction) {
+      $('.main-scroll').on('click', function () {
+        $.fn.fullpage.moveTo('about');
+      });
+    },
+  });
+
+  // visual gsap
+  const tl = gsap.timeline();
+  tl.from('.visual-title h2', {
+    delay: 0.4,
+    autoAlpha: 0,
+    y: -50,
+  });
+  tl.from('.visual-title p', {
+    autoAlpha: 0,
+    y: -30,
   });
 
   // visual swiper
-
   const visualSlider = new Swiper('.visual-slide', {
     loop: true,
     watchSlidesProgress: true,
@@ -21,6 +35,12 @@ $(function () {
     },
     autoplay: {
       delay: 6000,
+    },
+    on: {
+      slideChange: function () {
+        // Swiper 슬라이드가 변경될 때 GSAP 트윈 실행
+        tl.restart(); // 현재 GSAP 트윈을 재시작
+      },
     },
   });
 
@@ -132,7 +152,8 @@ $(function () {
         });
         // 텍스트 업데이트
         $('.business-title h3').text(businessTitle);
-        $('.business-title b').text(businessSubtitle);
+        // em이 왜 안 나올까????
+        $('.business-title em').text(businessSubtitle);
         $('.business-title p').text(businessContent);
       },
     },
