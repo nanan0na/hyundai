@@ -237,13 +237,14 @@
 
 .business {
   position: relative;
-  background-size: cover;
-  background-position: center;
+  background: #d8d8d8 no-repeat 0 0 / cover;
   padding: 6rem 0 0;
+  transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
 }
 
 /* 임시 */
-.business::before {
+/* .business::before {
   content: '';
   display: block;
   width: 100%;
@@ -251,9 +252,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: #828282 no-repeat 0 0 / cover;
   z-index: -1;
-}
+} */
 .business-con {
   margin-top: 5rem;
 }
