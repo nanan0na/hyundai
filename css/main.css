@@ -243,7 +243,7 @@
 }
 
 /* 임시 */
-/* .business::before {
+.business::before {
   content: '';
   display: block;
   width: 100%;
@@ -253,7 +253,7 @@
   left: 0;
   background: #828282 no-repeat 0 0 / cover;
   z-index: -1;
-} */
+}
 .business-con {
   margin-top: 5rem;
 }
