@@ -163,33 +163,39 @@
 
     <main id="fullpage">
       <section class="section visual">
-        <div class="visual-slide swiper-wrapper">
-          <div class="slide-item item1 swiper-slide">
-            <video src="./video/video1.mp4"></video>
-            <div class="visual-title">
-              <h2>Creative Foresight</h2>
-              <p>현대코퍼레이션은 고객과 사회가 원하는 것에 부응하기 위하여 항상 새롭고 신선함을 추구합니다.</p>
+        <div class="visual-slide swiper">
+          <div class="swiper-wrapper">
+            <div class="slide-item item1 swiper-slide">
+              <video src="./video/video1.mp4" autoplay muted loop></video>
+              <div class="visual-title">
+                <h2>Creative Foresight</h2>
+                <p>현대코퍼레이션은 고객과 사회가 원하는 것에 부응하기 위하여 항상 새롭고 신선함을 추구합니다.</p>
+              </div>
+            </div>
+            <div class="slide-item item2 swiper-slide">
+              <video src="./video/video2.mp4" autoplay muted loop></video>
+              <div class="visual-title">
+                <h2>Positive Thinking</h2>
+                <p>현대인으로서의 투철한 주인의식과 매사에 능동적으로 대응하고자 하는 자세를 추구합니다.</p>
+              </div>
+            </div>
+            <div class="slide-item item3 swiper-slide">
+              <video src="./video/video3.mp4" autoplay muted loop></video>
+              <div class="visual-title">
+                <h2>Unwavering Drive</h2>
+                <p>
+                  현대는 다른 사람들이 불가능하다며 포기해 버린 일을 험난한 여건 속에서도 강인한 추진력으로 성공시켜
+                  왔습니다.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="slide-item item2 swiper-slide">
-            <video src="./video/video2.mp4"></video>
-            <div class="visual-title">
-              <h2>Positive Thinking</h2>
-              <p>현대인으로서의 투철한 주인의식과 매사에 능동적으로 대응하고자 하는 자세를 추구합니다.</p>
-            </div>
-          </div>
-          <div class="slide-item item3 swiper-slide">
-            <video src="./video/video3.mp4"></video>
-            <div class="visual-title">
-              <h2>Unwavering Drive</h2>
-              <p>
-                현대는 다른 사람들이 불가능하다며 포기해 버린 일을 험난한 여건 속에서도 강인한 추진력으로 성공시켜
-                왔습니다.
-              </p>
-            </div>
+          <!-- pagination -->
+          <div class="visual-pagination-wrap">
+            <div class="visual-pagination swiper-pagination"></div>
+            <div class="pagination-pause"></div>
           </div>
         </div>
-
         <div class="main-scroll-wrap">
           <button class="main-scroll" type="button">SCROLL</button>
         </div>

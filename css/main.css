@@ -36,10 +36,71 @@
 }
 
 /* visual */
+.visual-pagination-wrap {
+  position: absolute;
+  bottom: 25%;
+  left: -30%;
+  width: 100%;
+  display: flex;
+}
+.visual-pagination {
+  width: auto;
+}
+.swiper-pagination-bullet {
+  width: 100px;
+  height: 5px;
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+}
+.swiper-pagination-bullet::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.swiper-pagination-bullet-active::before {
+  background-color: #fff;
+  -webkit-animation: slide-progress 6s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+  animation: slide-progress 6s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+.swiper-paused .swiper-pagination-bullet-active::before {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes slide-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.pagination-pause {
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/visual-pause-ico.png) no-repeat 0 0 / cover;
+  /* 어디갔니,, , ,, */
+}
+
 .visual {
   background: transparent;
   position: relative;
-  /* height: 100vh; */
 }
 .visual .swiper-slide {
   cursor: inherit;
@@ -57,6 +118,7 @@
   object-fit: cover;
   overflow: hidden;
 }
+
 .visual-title {
   position: absolute;
   top: 35%;
@@ -64,6 +126,7 @@
   transform: translateX(-50%);
   color: #fff;
   text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 .visual-title h2 {
   font-weight: 700;
@@ -117,9 +180,6 @@
   background: transparent;
 }
 
-.slide-item + .slide-item {
-  display: none;
-}
 /* about */
 .about {
   background: url(../img/about-bg.jpg) no-repeat 0 0 / cover;
@@ -278,7 +338,6 @@
   font-size: 2.4rem;
   color: rgba(255, 255, 255, 0.8);
   max-width: 45%;
-  word-break: keep-all;
 }
 .business-title > a {
   display: inline-flex;
@@ -383,7 +442,6 @@
   margin-top: 1.2rem;
   font-size: 2.4rem;
   width: 40%;
-  word-break: keep-all;
 }
 .h-story-slide {
   position: relative;

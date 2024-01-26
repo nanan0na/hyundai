@@ -22,6 +22,7 @@ body {
   /*  word-break: keep-all; */
   text-transform: capitalize;
   overflow-x: hidden !important;
+  word-break: keep-all;
 }
 a {
   text-decoration: none;

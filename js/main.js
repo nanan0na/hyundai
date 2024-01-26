@@ -10,7 +10,21 @@ $(function () {
     menu: '#indicator',
   });
 
-  // Swiper 초기화
+  // visual swiper
+
+  const visualSlider = new Swiper('.visual-slide', {
+    loop: true,
+    watchSlidesProgress: true,
+    pagination: {
+      el: '.visual-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 6000,
+    },
+  });
+
+  // business Swiper 초기화
   const businessContents = [
     {
       title: '철강',
@@ -122,6 +136,12 @@ $(function () {
         $('.business-title p').text(businessContent);
       },
     },
+  });
+
+  // Swiper autoplay 일시 중지/재시작
+  businessSlider.autoplay.stop();
+  $('.business').on('mouseenter', function () {
+    businessSlider.autoplay.start();
   });
 
   $('.business .swiper-slide').on('click', function () {
