@@ -68,6 +68,7 @@ a {
   width: 100%;
   /* background: rgba(255, 43, 43, 0.2); */
   z-index: 100;
+  transition: 0.3s;
 }
 nav {
   display: flex;
@@ -98,8 +99,6 @@ nav {
   width: 13rem;
   height: 4.2rem;
   background: url(../img/logo.png) no-repeat 0 0;
-  /* 임시 */
-  /* filter: invert(1); */
 }
 .gnb {
   display: flex;
