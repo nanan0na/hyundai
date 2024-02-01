@@ -1,0 +1,132 @@
+@charset 'utf-8';
+
+.sub-about {
+  margin-top: 10rem;
+}
+/* .sub-visual */
+.sub-visual {
+  padding: 15rem 0;
+  background: url(../img/sub-visual.png) no-repeat 0 0 / cover;
+}
+.sub-visual h2 {
+  font-size: 4.4rem;
+  color: #fff;
+  line-height: 1.3;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.sub-visual span {
+  margin: 4rem auto;
+  display: block;
+  width: 1px;
+  height: 16rem;
+  background: #fff;
+}
+.sub-visual h3 {
+  margin-top: 5rem;
+  font-size: 3.2rem;
+  color: #fff;
+  line-height: 1.3;
+  text-align: center;
+}
+.sub-tab {
+  margin-top: 3.5rem;
+}
+.sub-tab ol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-tab ol li {
+  font-size: 2.8rem;
+  color: #333;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+.sub-tab ol li a {
+  display: block;
+  width: 100%;
+}
+.sub-tab ol li::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+.sub-tab ol li:hover::after,
+.sub-tab ol li.active::after {
+  width: 100%;
+}
+.sub-tab ol li:hover,
+.sub-tab ol li.active {
+  color: var(--main-color);
+}
+.about-prev {
+  margin-top: 13rem;
+}
+.about-prev h3 {
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: #555;
+}
+.about-prev h3 b {
+  color: var(--main-color);
+}
+
+/* history */
+.history-con {
+  margin-top: 15rem;
+}
+.history-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 10rem;
+}
+.history-item-img {
+  width: 100.8rem;
+  /* height: 170rem; */
+  position: sticky;
+  top: 5rem;
+  left: 0;
+}
+.history-item-img img {
+  width: 100%;
+  height: 70rem;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+.history-item-exp-wrap {
+}
+.history-item-exp-wrap .history-item-exp {
+  margin-top: 2rem;
+}
+.history-item-exp-wrap .history-item-exp + .history-item-exp {
+  margin-top: 5rem;
+}
+.history-item-exp-wrap .history-item-exp strong {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.history-item-exp-wrap .history-item-exp dl {
+  font-size: 2rem;
+}
+.history-item-exp-wrap .history-item-exp dl dt {
+  margin-top: 3rem;
+  font-weight: 600;
+}
+.history-item-exp-wrap .history-item-exp dl dd {
+  margin-top: 0.6rem;
+  font-weight: 400;
+}
