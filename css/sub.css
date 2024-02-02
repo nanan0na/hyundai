@@ -76,11 +76,13 @@
 .about-prev h3 {
   font-size: 4.4rem;
   font-weight: 600;
-  color: #555;
+  color: #606060;
+  position: relative;
 }
 .about-prev h3 b {
   color: var(--main-color);
 }
+
 .overview,
 .history,
 .greeting {
@@ -122,6 +124,22 @@
 .overview-list li:hover strong {
   color: #fff;
 }
+.overview-list li.active,
+.overview-list li.active strong {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.overview-list li img + img,
+.overview-list li.active img:first-child,
+.overview-list li:hover img:first-child {
+  display: none;
+}
+.overview-list li:hover img + img,
+.overview-list li.active img + img {
+  display: block;
+}
+
 .overview-list li strong {
   display: block;
   width: 60%;
@@ -129,9 +147,10 @@
 }
 .overview-wrap > p {
   text-align: center;
-  margin-top: 6rem;
+  margin: 6rem auto;
   color: #333;
   font-size: 2.4rem;
+  width: 75%;
 }
 .overview-con {
   padding: 20rem 0 0;
@@ -248,10 +267,11 @@
   gap: 10rem;
   justify-content: start;
   position: relative;
+  background: #f39;
 }
 .history-item-img {
   width: 100.8rem;
-  /*   height: 70rem; */
+  background: #ff5;
   height: 170rem;
   position: sticky;
   top: 0;
@@ -259,7 +279,6 @@
 }
 .history-item-img img {
   width: 100%;
-  height: 100%;
   height: 70rem;
   object-fit: cover;
   transition: 0.5s ease;

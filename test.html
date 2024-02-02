@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="./css/sub123.css" />
 
     <script src="./js/jquery-3.7.1.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/sub.js"></script>
+    <script src="./js/sub123.js"></script>
   </head>
   <body>
-    <!-- e: header -->
     <main id="container" class="sub-about">
       <section class="sub-visual">
         <h2>
@@ -41,158 +40,98 @@
         </div>
       </div>
       <!-- inner 안 넣음 -->
-
-      <section class="history">
-        <div class="inner">
-          <div class="about-prev history-prev">
+      <section class="overview active">
+        <div class="about-prev overview-prev">
+          <div class="inner">
             <h3 class="about-h3">
-              어제의 역사는 오늘과 내일의 길을 인도하는 이정표입니다. <br />
-              변화와 혁신으로 지속가능한 <b>100년 기업의 미래</b>를 만들어갑니다.
+              <b data-text="현대코퍼레이션">현대코퍼레이션</b>은<br />
+              전 세계 각지에 40여 개의 강력한 <br />글로벌 비즈니스 네트워크를 구축하고 있습니다.
             </h3>
+            <div class="overview-wrap">
+              <ul class="overview-list">
+                <li class="active">
+                  <img src="./img/sub-overview-list-pic01.png" alt="1976년 설립" />
+                  <img src="./img/sub-overview-list-pic01-w.png" alt="1976년 설립" />
+                  <strong>1976년 설립</strong>
+                </li>
+                <li>
+                  <img src="./img/sub-overview-list-pic02.png" alt="40여개의 글로벌 네트워크 구축" />
+                  <img src="./img/sub-overview-list-pic02-w.png" alt="40여개의 글로벌 네트워크 구축" />
+                  <strong>40여개의 글로벌 네트워크 구축</strong>
+                </li>
+                <li>
+                  <img src="./img/sub-overview-list-pic03.png" alt="각종 중화학 공업 중심 제품" />
+                  <img src="./img/sub-overview-list-pic03-w.png" alt="각종 중화학 공업 중심 제품" />
+                  <strong>각종 중화학 공업 중심 제품</strong>
+                </li>
+                <li>
+                  <img src="./img/sub-overview-list-pic04.png" alt="에너지ㆍ자원개발의 성과" />
+                  <img src="./img/sub-overview-list-pic04-w.png" alt="에너지ㆍ자원개발의 성과" />
+                  <strong>에너지ㆍ자원개발의 성과</strong>
+                </li>
+              </ul>
+              <p>
+                세계시장을 무대로 중화학 제품 중심의 국제무역과 해외투자, 그리고 에너지, 자원개발 사업에서 큰 성과를
+                거두며 한국의 대표적 종합무역상사로 성장해 왔습니다.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="history-con">
-          <div class="history-item history-2020">
-            <figure class="history-item-img history-2020-img">
-              <img src="./img/sub-history-pic01.png" alt="history-2020" />
-            </figure>
-            <div class="history-item-exp-wrap">
-              <div class="history-item-exp history-2023">
-                <strong>2023</strong>
-                <dl>
-                  <dt>12</dt>
-                  <dd>프롤로그벤처스(CVC), 누적 펀드 총액 1,000억 원 돌파</dd>
-                  <dd>현대코퍼레이션, 신용등급 ‘A-(긍정적)’에서 ‘A0(안정적)’으로 상향 (나신평)</dd>
-                  <dt>09</dt>
-                  <dd>현대코퍼레이션홀딩스, IFA 2023 참가</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2022">
-                <strong>2022</strong>
-                <dl>
-                  <dt>10</dt>
-                  <dd>현대코퍼레이션, 인도네시아 자동차부품 합작법인 설립</dd>
-                  <dt>07</dt>
-                  <dd>현대퓨얼스, 청해부대 벙커유 공급 성사</dd>
-                  <dd>기업형 벤처캐피탈(CVC) ‘프롤로그벤처스’ 신기술사업금융업 등록</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2021">
-                <strong>2021</strong>
-                <dl>
-                  <dt>03</dt>
-                  <dd>현대종합상사, 현대코퍼레이션으로 사명 일원화</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2020">
-                <strong>2020</strong>
-                <dl>
-                  <dt>07</dt>
-                  <dd>현대종합상사, 일본 오카야마현 미마사카에 태양광 발전소 2호 준공</dd>
-                  <dd>현물출자 통한 새 물류법인 ‘현대네비스’ 분할 설립</dd>
-                  <dt>01</dt>
-                  <dd>현대코퍼레이션홀딩스, 캄보디아 최초로 수출검역시설 갖춘 농산물유통센터 준공</dd>
-                </dl>
-              </div>
+        <div class="overview-con">
+          <div class="circle-container">
+            <div class="circle scroll-circle"></div>
+            <div class="circle-text">
+              <h4>준비된 100년 기업</h4>
+              <p>Sustainable Value Creating Corporation</p>
             </div>
           </div>
-          <div class="history-item history-2010">
-            <figure class="history-item-img history-2010-img">
-              <img src="./img/sub-history-pic02.png" alt="history-2010" />
-            </figure>
-            <div class="history-item-exp-wrap">
-              <div class="history-item-exp history-2019">
-                <strong>2019</strong>
-                <dl>
-                  <dt>07</dt>
-                  <dd>현대종합상사, 인도 원전시장에 570억 규모 비상발전기 공급</dd>
-                  <dt>04</dt>
-                  <dd>현대종합상사, 투르크메니스탄 도로교통청과 수송 인프라 구축 협력 MOU</dd>
-                </dl>
+          <div class="full-container">
+            <h4>
+              우리는 끊임없는 환경변화에 유연하게 적응하고, 시장에서 영원히 지속 가능한 기업으로 진화하여, 세상을 이롭게
+              하는 더 큰 가치를 창출합니다.
+            </h4>
+            <span></span>
+
+            <div class="overview-exp">
+              <div class="overview-exp-more respectable-wrap">
+                <div class="overview-exp-more-title respectable-title">
+                  <h3>가치 있는 변화</h3>
+                  <p>Respectable Transformation</p>
+                </div>
+                <ul class="overview-exp-more-list respectable-list">
+                  <li>
+                    <strong>최고의 전문성</strong>
+                    <p>Industry-LeadingExpertise</p>
+                  </li>
+                  <li>
+                    <strong>체계적 실행</strong>
+                    <p>SystematicPerformance</p>
+                  </li>
+                  <li>
+                    <strong>소통과 협력</strong>
+                    <p>Communicationand Cooperation</p>
+                  </li>
+                </ul>
               </div>
-              <div class="history-item-exp history-2018">
-                <strong>2018</strong>
-                <dl>
-                  <dt>12</dt>
-                  <dd>현대코퍼레이션 그룹, 백사마을에 사랑의 연탄 나눔 후원</dd>
-                  <dd>현대종합상사, 인도 첸나이 철강가공센터 포스현대 증설 준공</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2016">
-                <strong>2016</strong>
-                <dl>
-                  <dt>09</dt>
-                  <dd>현대코퍼레이션그룹 창립 40주년 기념행사 개최</dd>
-                  <dt>03</dt>
-                  <dd>현대중공업그룹에서 계열분리하여 현대코퍼레이션그룹으로 독립</dd>
-                  <dd>현대종합상사, 코라오홀딩스와 동남아 지역 사업 협력 MOU 체결</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2011">
-                <strong>2011</strong>
-                <dl>
-                  <dt>07</dt>
-                  <dd>인도 만갈로사에 2만5천t, 1,450만 달러 규모 비료 공급 계약 체결</dd>
-                  <dd>리비아에 승용차 4,000대, 3,850만 달러 수출 계약</dd>
-                  <dd>우크라이나 키예프 지사 개설</dd>
-                  <dt>05</dt>
-                  <dd>카자흐스탄에 철도신호시스템 350억 달러 규모 첫 수출</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2010">
-                <strong>2010</strong>
-                <dl>
-                  <dt>01</dt>
-                  <dd>정몽혁 회장 취임</dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="history-item history-2000">
-            <figure class="history-item-img history-2000-img">
-              <img src="./img/sub-history-pic03.png" alt="history-2000" />
-            </figure>
-            <div class="history-item-exp-wrap">
-              <div class="history-item-exp history-2009">
-                <strong>2009</strong>
-                <dl>
-                  <dt>11</dt>
-                  <dd>예멘LNG 개발사업 생산개시</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2008">
-                <strong>2008</strong>
-                <dl>
-                  <dt>12</dt>
-                  <dd>알제리 알제 지사 개설</dd>
-                  <dt>08</dt>
-                  <dd>브라질 상파울로 지사 개설</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2006">
-                <strong>2006</strong>
-                <dl>
-                  <dt>11</dt>
-                  <dd>베트남 11-2 가스전(PNG) 개발사업 생산개시</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2005">
-                <strong>2005</strong>
-                <dl>
-                  <dt>06</dt>
-                  <dd>카자흐스탄 알마티 지사 개설</dd>
-                  <dt>01</dt>
-                  <dd>러시아 모스크바 지사 개설</dd>
-                </dl>
-              </div>
-              <div class="history-item-exp history-2000">
-                <strong>2000</strong>
-                <dl>
-                  <dt>11</dt>
-                  <dd>국내기업 최초로 250억불 수출의 탑 수상</dd>
-                  <dt>04</dt>
-                  <dd>오만 LNG 개발사업 생산개시</dd>
-                </dl>
+              <div class="overview-exp-more respectable-wrap">
+                <div class="overview-exp-more-title respectable-title">
+                  <h3>인재상</h3>
+                  <p>Company Values</p>
+                </div>
+                <ul class="overview-exp-more-list respectable-list">
+                  <li>
+                    <strong>학습하는 인재</strong>
+                    <p>LearningProfessional</p>
+                  </li>
+                  <li>
+                    <strong>책임 있는 인재</strong>
+                    <p>ResponsibleProfessional</p>
+                  </li>
+                  <li>
+                    <strong>소통하는 인재</strong>
+                    <p>CommunicatingProfessional</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

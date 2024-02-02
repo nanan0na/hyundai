@@ -44,4 +44,24 @@ $(function () {
     $('.overview-list li').removeClass('active');
     $(this).addClass('active');
   });
+
+  // overview-circle
+  gsap.to('.circle', {
+    scaleX: 4,
+    scaleY: 4,
+    scrollTrigger: {
+      trigger: '.circle-container',
+      start: 'top+=10 center',
+      end: 'bottom+=500',
+      scrub: true,
+      pin: true,
+      markers: true,
+    },
+
+    onComplete: function () {
+      $('.circle-text').css({
+        opacity: 1,
+      });
+    },
+  });
 });
