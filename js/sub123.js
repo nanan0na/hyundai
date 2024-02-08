@@ -46,22 +46,38 @@ $(function () {
   });
 
   // overview-circle
-  gsap.to('.circle', {
+  gsap.registerPlugin(ScrollTrigger);
+  tl.to('.circle', {
     scaleX: 4,
     scaleY: 4,
+    scrub: 1,
     scrollTrigger: {
       trigger: '.circle-container',
-      start: 'top+=10 center',
+      start: '-70% center',
       end: 'bottom+=500',
-      scrub: true,
+      toggleActions: 'play none reverse none',
       pin: true,
       markers: true,
     },
+  });
 
+  // 타임라인에 추가
+  tl.to('.circle-text', {
+    opacity: 1,
+  });
+  tl.to('.circle', {
+    scaleX: 300,
+    scaleY: 300,
+    scrub: 1,
+    scrollTrigger: {
+      trigger: '.overview > span',
+      start: '10% center',
+      end: 'bottom+=1000 center',
+      markers: true,
+    },
     onComplete: function () {
-      $('.circle-text').css({
-        opacity: 1,
-      });
+      $('.circle-text').css('opacity', 0);
+      $('.full-container').css('opacity', 1);
     },
   });
 });
