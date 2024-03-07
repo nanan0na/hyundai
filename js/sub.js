@@ -77,8 +77,8 @@ $(function () {
   gsap.to(circleText, {
     scrollTrigger: {
       trigger: circleText,
-      start: 'bottom+=700rem center',
-      end: 'bottom+=700rem center',
+      start: 'bottom+=90rem center',
+      end: 'bottom+=90rem center',
       scrub: true,
       // markers: true,
     },
@@ -94,18 +94,28 @@ $(function () {
     },
     opacity: 1,
   });
-  /*   gsap.to('.overview-exp-more:last-child', {
+  gsap.to('.respectable-wrap', {
     scrollTrigger: {
       trigger: '.overview-exp',
-      start: 'top+=500rem',
-      end: '+=100rem',
+      start: 'bottom-=50rem center',
+      end: 'bottom-=50rem center',
       scrub: true,
       // markers: true,
     },
-    autoAlpha: 1,
-  }); */
+    opacity: 1,
+  });
 
-  // 문제가 생김,,, .overview-exp-more:last-child 이거 어카냐,,ㅎㅎ
-  // 스크롤 길이 조정해주고, full-container 위치 조정해주면 될 것 같음!!! ㅎㅎ
-  // 이제 좀 끝내고 얼른 sticky부분 하기!!! 홧팅! - 0304 nana
+  gsap.to('.valueable-wrap', {
+    scrollTrigger: {
+      trigger: '.overview-exp',
+      start: 'bottom-=50rem center',
+      end: 'bottom-=50rem center',
+      scrub: true,
+      // markers: true,
+    },
+    opacity: 0,
+  });
+  // 텍스트 효과 안 넣음 아직인지 계속일지는 모르겠지만,,,
+
+  // history
 });
