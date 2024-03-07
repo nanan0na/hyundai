@@ -54,13 +54,13 @@ $(function () {
   $('.search-ico').on('click', function () {
     $('.submenu, .plus-element, .search-ico').css('display', 'none');
     $('.tab-search').css('display', 'flex');
-    $('.btn-close').css('display', 'block');
+    $('.btn-close, .recommend-search-wrap').css('display', 'block');
   });
   // search-close
   $('.btn-close').on('click', function () {
     $('.submenu, .plus-element, .search-ico').css('display', 'block');
     $('.tab-search').css('display', 'none');
-    $('.btn-close').css('display', 'none');
+    $('.btn-close, .recommend-search-wrap').css('display', 'none');
     $('.search-ico').css('display', 'block');
   });
 

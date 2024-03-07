@@ -10,14 +10,16 @@ html {
   font-size: 62.5%; /* 1rem = 10px */
   scroll-behavior: smooth;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 body {
   font: 2rem/1.5 'Pretendard', sans-serif;
   color: var(--text-color);
   text-transform: capitalize;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important;
   word-break: keep-all;
-  overflow: hidden;
+  overflow: hidden; */
 }
 a {
   text-decoration: none;
@@ -205,6 +207,30 @@ nav {
   filter: brightness(0);
   margin-left: 2rem;
 }
+.recommend-search-wrap {
+  position: absolute;
+  bottom: -350%;
+  left: 35%;
+  transform: translateX(-50%);
+  /* display: none; */
+  color: #000;
+  display: none;
+}
+.recommend-search-wrap.active {
+  display: block;
+}
+.recommend-search-wrap strong {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.recommend-list {
+  display: flex;
+  color: var(--main-color);
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  gap: 2.5rem;
+  align-items: center;
+}
 .plus-element {
   position: absolute;
   display: block;
@@ -247,6 +273,7 @@ nav {
 #footer {
   background: #222;
   padding: 7rem 0 3.6rem;
+
   /*   position: relative;
   z-index: 100; */
 }

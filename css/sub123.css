@@ -153,24 +153,43 @@
   width: 80%;
 }
 .overview-con {
-  padding: 80rem 0 50rem;
+  padding: 10rem 0 40rem;
   overflow: hidden;
   position: relative;
+  background: #a32e2e79;
 }
 .circle-container {
   margin: 0 auto;
   position: relative;
+  /* 세로 크기 알아서 줘야 하는 부분 */
+  height: 200rem;
+}
+.circle-mask {
+  width: 15rem;
+  height: 15rem;
+  background: var(--main-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: -1;
 }
 .circle {
   background: var(--main-color);
   height: 15rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  position: absolute;
+
+  /* margin: 20rem auto;
+  position: relative; */
+  position: sticky;
+  top: 10%;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0); /* 원래는 0부터 시작 */
-  overflow: hidden;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.3s;
 }
 .circle-text {
   position: absolute;
@@ -197,26 +216,30 @@
   display: block;
 }
 .overview-con .full-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
-  /* 임시 */
-  /* background: var(--main-color); */
-  padding: 20rem 0;
-  opacity: 0;
+  height: 200rem;
+  /*   position: relative; */
+  /* margin-top: 80rem; */
+  position: relative;
+  background: rgb(157, 157, 150);
 }
-.full-container h4 {
+
+.full-container-exp {
+  /* sticky로 고정해보기 */
+  position: sticky;
+  top: 5%;
+  padding-top: 5rem;
+  /*   opacity: 0; */
+}
+.full-container-exp h4 {
   font-size: 3.2rem;
   font-weight: 600;
   color: #fff;
-  width: 50%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
-.full-container > span {
+.full-container-exp > span {
   margin: 5rem auto;
   display: block;
   width: 1px;

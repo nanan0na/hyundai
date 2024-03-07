@@ -47,37 +47,74 @@ $(function () {
 
   // overview-circle
   gsap.registerPlugin(ScrollTrigger);
-  tl.to('.circle', {
-    scaleX: 4,
-    scaleY: 4,
-    scrub: 1,
+  const circle = document.querySelector('.circle');
+  const circleText = document.querySelector('.circle-text');
+
+  gsap.to(circle, {
     scrollTrigger: {
-      trigger: '.circle-container',
-      start: '-70% center',
-      end: 'bottom+=500',
-      toggleActions: 'play none reverse none',
-      pin: true,
+      trigger: circle,
+      start: 'top-=200rem center',
+      end: '+=20rem',
+      scrub: true,
       markers: true,
     },
-  });
-
-  // 타임라인에 추가
-  tl.to('.circle-text', {
+    width: '60rem',
+    height: '60rem',
     opacity: 1,
   });
-  tl.to('.circle', {
-    scaleX: 300,
-    scaleY: 300,
-    scrub: 1,
+
+  gsap.to(circleText, {
     scrollTrigger: {
-      trigger: '.overview > span',
-      start: '10% center',
-      end: 'bottom+=1000 center',
+      trigger: circle,
+      start: 'top-=80rem center+=15rem', // Adjust the start value based on your design
+      end: '+=60rem', // Adjust the end value based on your design
+      scrub: true,
+      markers: true, // Remove this line in production
+    },
+    opacity: 1,
+  });
+  gsap.to('.circle-mask', {
+    scrollTrigger: {
+      trigger: '.full-container',
+      start: 'top center+=15rem',
+      end: '+=100rem',
+      scrub: true,
       markers: true,
     },
-    onComplete: function () {
-      $('.circle-text').css('opacity', 0);
-      $('.full-container').css('opacity', 1);
-    },
+    width: '10000%',
+    height: '10000%',
   });
+  gsap.to(circleText, {
+    scrollTrigger: {
+      trigger: '.full-container',
+      start: 'top center+=15rem',
+      end: '+=100rem',
+      scrub: true,
+    },
+    opacity: 0,
+  });
+  gsap.to('.full-container-exp', {
+    scrollTrigger: {
+      trigger: '.full-container',
+      start: 'top+=20rem',
+      end: '+=100rem',
+      scrub: true,
+      markers: true,
+    },
+    opacity: 1,
+  });
+  // gsap.to('.overview-exp-more:last-child', {
+  //   scrollTrigger: {
+  //     trigger: '.overview-exp',
+  //     start: 'top+=500rem',
+  //     end: '+=100rem',
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  //   autoAlpha: 1,
+  // });
+
+  // 문제가 생김,,, .overview-exp-more:last-child 이거 어카냐,,ㅎㅎ
+  // 스크롤 길이 조정해주고, full-container 위치 조정해주면 될 것 같음!!! ㅎㅎ
+  // 이제 좀 끝내고 얼른 sticky부분 하기!!! 홧팅! - 0304 nana
 });

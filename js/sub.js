@@ -44,4 +44,68 @@ $(function () {
     $('.overview-list li').removeClass('active');
     $(this).addClass('active');
   });
+
+  // overview-circle
+  gsap.registerPlugin(ScrollTrigger);
+  const circle = document.querySelector('.circle');
+  const circleText = document.querySelector('.circle-text');
+
+  tl.to(circle, {
+    scrollTrigger: {
+      trigger: circle,
+      start: 'top center',
+      end: 'top center',
+      scrub: true,
+      // markers: true,
+    },
+    width: '60rem',
+    height: '60rem',
+    opacity: 1,
+  });
+  // gsap.to(circleText, { autoAlpha: 1 });
+  gsap.to('.circle-mask', {
+    scrollTrigger: {
+      trigger: circleText,
+      start: 'bottom+=500rem center',
+      end: 'bottom+=500rem center',
+      scrub: true,
+      // markers: true,
+    },
+    width: '1000%',
+    height: '1000%',
+  });
+  gsap.to(circleText, {
+    scrollTrigger: {
+      trigger: circleText,
+      start: 'bottom+=700rem center',
+      end: 'bottom+=700rem center',
+      scrub: true,
+      // markers: true,
+    },
+    opacity: 0,
+  });
+  gsap.to('.full-container', {
+    scrollTrigger: {
+      trigger: '.full-container',
+      start: '20% center',
+      end: '20% center',
+      scrub: true,
+      // markers: true,
+    },
+    opacity: 1,
+  });
+  /*   gsap.to('.overview-exp-more:last-child', {
+    scrollTrigger: {
+      trigger: '.overview-exp',
+      start: 'top+=500rem',
+      end: '+=100rem',
+      scrub: true,
+      // markers: true,
+    },
+    autoAlpha: 1,
+  }); */
+
+  // 문제가 생김,,, .overview-exp-more:last-child 이거 어카냐,,ㅎㅎ
+  // 스크롤 길이 조정해주고, full-container 위치 조정해주면 될 것 같음!!! ㅎㅎ
+  // 이제 좀 끝내고 얼른 sticky부분 하기!!! 홧팅! - 0304 nana
 });
