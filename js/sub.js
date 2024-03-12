@@ -56,7 +56,6 @@ $(function () {
       start: 'top center',
       end: 'top center',
       scrub: true,
-      // markers: true,
     },
     width: '60rem',
     height: '60rem',
@@ -69,7 +68,6 @@ $(function () {
       start: 'bottom+=500rem center',
       end: 'bottom+=500rem center',
       scrub: true,
-      // markers: true,
     },
     width: '1000%',
     height: '1000%',
@@ -80,7 +78,6 @@ $(function () {
       start: 'bottom+=90rem center',
       end: 'bottom+=90rem center',
       scrub: true,
-      // markers: true,
     },
     opacity: 0,
   });
@@ -90,7 +87,6 @@ $(function () {
       start: '20% center',
       end: '20% center',
       scrub: true,
-      // markers: true,
     },
     opacity: 1,
   });
@@ -100,7 +96,6 @@ $(function () {
       start: 'bottom-=50rem center',
       end: 'bottom-=50rem center',
       scrub: true,
-      // markers: true,
     },
     opacity: 1,
   });
@@ -111,11 +106,31 @@ $(function () {
       start: 'bottom-=50rem center',
       end: 'bottom-=50rem center',
       scrub: true,
-      // markers: true,
     },
     opacity: 0,
   });
   // 텍스트 효과 안 넣음 아직인지 계속일지는 모르겠지만,,,
 
   // history
+  // 여기 수정해야 해
+  // gsap.to('.history-2010-img', {
+  //   scrollTrigger: {
+  //     trigger: '.history-2019',
+  //     start: ' center',
+  //     end: ' center',
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  //   opacity: 1,
+  // });
+  // gsap.to('.history-2000-img', {
+  //   scrollTrigger: {
+  //     trigger: '.history-2008',
+  //     start: ' center',
+  //     end: ' center',
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  //   opacity: 1,
+  // });
 });
