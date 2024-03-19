@@ -43,6 +43,7 @@ $(function () {
     $('.tab-search').css('display', 'none');
     $('.btn-close').css('display', 'none');
     $('.search-ico').css('display', 'block');
+    $('.recommend-search-wrap').css('display', 'none');
   });
 
   // 마우스 휠을 조작했을 때 : wheel

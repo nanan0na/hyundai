@@ -216,9 +216,9 @@ nav {
   color: #000;
   display: none;
 }
-.recommend-search-wrap.active {
+/* .recommend-search-wrap.active {
   display: block;
-}
+} */
 .recommend-search-wrap strong {
   font-size: 2rem;
   font-weight: 600;

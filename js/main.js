@@ -152,7 +152,7 @@ window.addEventListener('load', () => {
         });
         // 텍스트 업데이트
         $('.business-title h3').text(businessTitle);
-        // em이 왜 안 나올까????
+        // em
         $('.business-title em').text(businessSubtitle);
         $('.business-title p').text(businessContent);
       },
